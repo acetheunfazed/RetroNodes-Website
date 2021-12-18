@@ -1,10 +1,9 @@
 ## Sup, I'm Siddharth / Ace!
+### Personal Account: [SidBoi](https://github.com/SidBoi)
 
 #### • Skills: Developer, YouTuber
 #### • Projects: Beap.xyz, GenixHost, FyreNodes
 #### • Languages: HTML, CSS, Py, Js & PHP
-
-### Personal Account: [SidBoi](https://github.com/SidBoi)
 
 ##### Developer Site: [ItsAceCraft.xyz](https://dev.itsacecraft.xyz)
 ##### Discord: [ItsAceCraft#3421](https://discord.gg/6wmDX5CyYT)
