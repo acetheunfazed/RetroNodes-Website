@@ -1,0 +1,373 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroNodes Hosting</title>
+    <link rel="icon" type="image/png" href="assets/images/retronodes.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./assets/css/app.css" defer="" rel="stylesheet">
+    <link href="./assets/css/style.css" defer="" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-zinc-950 antialiased">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar Section -->
+    <div id="content" class="hidden"></div>
+
+    <header class="absolute inset-x-0 top-0 z-10">
+        <div class="relative flex justify-center">
+            <div class="mx-4 w-full max-w-7xl">
+                <nav class="flex min-h-[80px] items-center justify-between px-4 py-3">
+                    <div class="flex items-center space-x-2">
+                        <img src="assets/images/retronodes.png" alt="Your Logo" class="small-logo">
+                        <h1 class="text-transparent bg-gradient-to-br from-white to-zinc-500 bg-clip-text w-max text-2xl font-bold font-raleway">RetroNodes Hosting</h1>
+                    </div>
+                    <div class="flex flex-1 items-center justify-end space-x-4 text-sm font-medium text-zinc-300 sm:space-x-6">
+                        <a href="https://status.retronodes.cloud" class="group relative overflow-hidden rounded-full p-px text-sm/6 text-zinc-400 duration-300 hover:text-zinc-100">
+                            <div class="relative z-10 rounded-full bg-zinc-950 px-4 py-1.5 ring-1 ring-white/10">
+                                Uptime Status
+                            </div>
+                        </a>
+                        <a href="https://discord.com/invite/7nxh3WsY46" class="group relative overflow-hidden rounded-full p-px text-sm/6 text-zinc-400 duration-300 hover:text-zinc-100">
+                            <div class="relative z-10 rounded-full bg-zinc-950 px-4 py-1.5 ring-1 ring-white/10">
+                                Discord Server
+                            </div>
+                        </a>
+                        <a href="https://dash.retronodes.cloud" class="group relative overflow-hidden rounded-full p-px text-sm/6 text-zinc-400 duration-300 hover:text-zinc-100">
+                            <div class="relative z-10 rounded-full bg-zinc-950 px-4 py-1.5 ring-1 ring-white/10">
+                                Dashboard
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <section class="relative isolate transform-gpu pt-14">
+            <svg class="absolute inset-0 -z-10 h-full w-full stroke-cyan-400/10 [mask-image:radial-gradient(75%_50%_at_top_center,white,transparent)]">
+            <defs>
+                <pattern id="hero" width="80" height="80" x="50%" y="-1" patternUnits="userSpaceOnUse">
+                    <path d="M.5 200V.5H200" fill="none"></path>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#hero)"></rect>
+        </svg>
+            <div class="py-24 sm:py-36 md:py-40 lg:pb-40">
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="relative mx-auto max-w-3xl text-center">
+                        <h1 class="bg-gradient-to-br from-white to-zinc-500/20 bg-clip-text text-4xl/[1.07] font-bold tracking-tight text-transparent md:text-7xl/[1.07]">Hosting Made Easy<span class="font-rajdhani"></span> with RetroNodes ;)<span class="font-raleway text-6xl/[1.07] md:text-8xl/[1.07]"> <span class="font-karla"> </span></span>
+                        </h1>
+                        <p class="mt-6 text-md font-medium text-zinc-400 md:text-xl">
+                            Start your Minecraft Server today with full support for all mods and plugins with our high-performance nodes located near you, ensuring low ping and a superior gaming experience with our all in one GamePanel!
+                        </p>
+
+                        <div class="relative pt-10">
+                            <div class="relative center-image" style="transform: none;">
+                                <div class="rounded-md bg-zinc-950 ring-3 ring-white/20 lg:rounded-4xl">
+                                    <img id="myImage" src="assets/images/panel.png" alt="showcase" width="700" height="800">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel Pop-Up -->
+                        <div id="myModal" class="popup">
+                            <div class="popup-content">
+                                <img src="assets/images/panel.png" alt="showcase">
+                                <button class="cancel-button">Cancel View</button>
+                            </div>
+                        </div>
+
+                        <script>
+                            // Get the modal
+                            var modal = document.getElementById("myModal");
+
+                            // Get the image and insert it inside the modal
+                            var img = document.getElementById("myImage");
+                            var modalImg = modal.querySelector(".popup-content img");
+                            img.onclick = function() {
+                                modal.style.display = "flex";
+                                setTimeout(() => {
+                                    modal.classList.add('visible');
+                                }, 10);
+                                modalImg.src = this.src;
+                            }
+
+                            // Get the button element that closes the modal
+                            var button = modal.querySelector(".cancel-button");
+
+                            // When the user clicks on the button, close the modal
+                            button.onclick = function() {
+                                modal.classList.remove('visible');
+                                setTimeout(() => {
+                                    modal.style.display = "none";
+                                }, 300);
+                            }
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                                if (event.target == modal) {
+                                    modal.classList.remove('visible');
+                                    setTimeout(() => {
+                                        modal.style.display = "none";
+                                    }, 300);
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mx-auto max-w-7xl p-6 py-16 md:py-1 lg:px-8">
+            <div class="grid max-w-xl lg:max-w-2xl items-start justify-between gap-5">
+                <div class="text-4xl/[1.07] font-bold tracking-tight md:text-5xl/[1.07]">
+                    <span class="bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">
+                A GamePanel that has it all!
+            </span>
+                </div>
+                <div class="text-lg text-zinc-400/80">
+                    Unlock Various Management Capabilities with Our GamePanel, <br>From SFTP Access, Activity Logs, Startup Manager & many more as listed below:
+                </div>
+            </div>
+            <div class="mt-16 grid grid-cols-6 gap-4 lg:grid-cols-12 lg:gap-6 xl:gap-8">
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+                    <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
+                        <div class="relative -z-10 h-full w-full">
+                            <div class="absolute -left-0 right-0 h-full w-full -top-6">
+                                <img src="https://cdn.discordapp.com/attachments/1233699824021540864/1256571668495597568/image.png?ex=6681410f&is=667fef8f&hm=76023852e241e8178d4102bf1be16731b1f4ad094fb56ddb3fe7cc23708985ec&" class="h-full w-full" alt="pic">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto w-full space-y-4 px-4 pb-6">
+                        <h3 class="text-lg/none font-medium text-zinc-200">File Manager</h3>
+                        <p class="max-w-sm text-sm text-zinc-400/80">Manage server files directly from our GamePanel, including editing configuration files, handling game assets, and uploading or downloading files.</p>
+                    </div>
+                </div>
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+                    <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
+                        <div class="relative -z-10 h-full w-full">
+                            <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
+                                <img src="https://cdn.discordapp.com/attachments/1233699824021540864/1256575475484987452/image.png?ex=6681449b&is=667ff31b&hm=efab8782ad707db21775f565cadd3f0b77ba9f3b9e92272f5bd966a814b6f47f&" class="h-full w-auto" alt="pic">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto w-full space-y-4 px-4 pb-6">
+                        <h3 class="text-lg/none font-medium text-zinc-200">Plugins Manager</h3>
+                        <p class="max-w-sm text-sm text-zinc-400/80">Easily download plugins from all market places without manually visiting, downloading, uploading and restarting to apply your plugins.</p>
+                    </div>
+                </div>
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+                    <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
+                        <div class="relative -z-10 h-full w-full">
+                            <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
+                                <img src="https://cdn.discordapp.com/attachments/1233699824021540864/1256572421939662949/image.png?ex=668141c3&is=667ff043&hm=bc6319a069b4c0925b0ac09a3ed98d1bf2ffe6531650bbf46246b45ecb72ab5b&" class="h-full w-auto" alt="pic">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto w-full space-y-4 px-4 pb-6">
+                        <h3 class="text-lg/none font-medium text-zinc-200">Schedule Manager</h3>
+                        <p class="max-w-sm text-sm text-zinc-400/80">Easily automate tasks from our GamePanel for servers, including backups, updates, and custom scripts, ensuring smooth routine maintenance.</p>
+                    </div>
+                </div>
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+                    <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
+                        <div class="relative -z-10 h-full w-full">
+                            <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
+                                <img src="https://cdn.discordapp.com/attachments/1233699824021540864/1256577191647641620/image.png?ex=66814634&is=667ff4b4&hm=0ebec87d7c43c6026fd6489def6bd7f5b7c73284c7fdfc646f8654c053c2e4b5&" class="h-full w-auto" alt="pic">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto w-full space-y-4 px-4 pb-6">
+                        <h3 class="text-lg/none font-medium text-zinc-200">Backup Manager</h3>
+                        <p class="max-w-sm text-sm text-zinc-400/80">Safeguard server data backups with our GamePanel, ensuring utmost data security and effortless restoration with a single click.</p>
+                    </div>
+                </div>
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+                    <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
+                        <div class="relative -z-10 h-full w-full">
+                            <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
+                                <img src="https://cdn.discordapp.com/attachments/1233699824021540864/1256574792585445376/image.png?ex=668143f8&is=667ff278&hm=8b71b225c94b1be9367131fb2208c0c9907cb20343abaac56951ef88e910789d&" class="h-full w-auto" alt="pic">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto w-full space-y-4 px-4 pb-6">
+                        <h3 class="text-lg/none font-medium text-zinc-200">Network Manager</h3>
+                        <p class="max-w-sm text-sm text-zinc-400/80">Our GamePanel offers intuitive controls, empowering users to effortlessly manage ports, IP addresses, and firewall settings with ease and precision.</p>
+                    </div>
+                </div>
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+                    <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
+                        <div class="relative -z-10 h-full w-full">
+                            <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
+                                <img src="https://cdn.discordapp.com/attachments/1233699824021540864/1256573986721103954/image.png?ex=66814338&is=667ff1b8&hm=258714194420a26e7d24af644ade23c6e042a40a1eccfd9b68e138ca94646f1a&" class="h-full w-auto" alt="pic">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto w-full space-y-4 px-4 pb-6">
+                        <h3 class="text-lg/none font-medium text-zinc-200">Subusers Manager</h3>
+                        <p class="max-w-sm text-sm text-zinc-400/80">Our GamePanel's subusers manager simplifies access management, enabling administrators to assign roles and permissions with flexibility and control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-7xl p-6 pt-16 md:pt-24 lg:px-8 text-center">
+            <div class="grid max-w-xl lg:max-w-2xl items-start justify-center gap-5 mx-auto">
+                <div class="text-4xl/[1.07] font-bold tracking-tight md:text-5xl/[1.07]">
+                    <span class="bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">
+                        Ready to order a Plan?
+                    </span>
+                </div>
+            </div>
+            <div class="mt-6 text-lg text-zinc-400/80">
+                We are currently accepting orders through our Discord server. <br>Click the button below to join and explore our plans to order a server!
+            </div>
+            <div class="relative mt-9 flex justify-center text-zinc-400">
+                <a href="https://discord.com/invite/7nxh3WsY46" class="group relative overflow-hidden rounded-full p-px text-sm/6 text-zinc-400 duration-300 hover:text-zinc-100">
+                    <div class="dot animate-flow p-4 blur-md group-hover:blur-sm group-hover:p-5 -mt-2 -ml-2 rounded-full bg-cyan-400/90 absolute"></div>
+                    <div class="relative z-10 rounded-full bg-zinc-950 px-4 py-1.5 ring-1 ring-white/10">
+                        Click to Join
+                    </div>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- Testimonials Section Start Unfinished
+        <section class="mx-auto max-w-7xl p-6 py-16 md:py-24 lg:px-8">
+            <div class="grid max-w-xl lg:max-w-2xl items-start justify-between gap-5">
+                <div class="text-4xl/[1.07] font-bold tracking-tight md:text-5xl/[1.07]">
+                    <span class="bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">
+                What our clients say?
+            </span>
+                </div>
+            </div>
+            <div class="relative mt-9 grid grid-cols-1 gap-4 md:grid-cols-4 h-max text-zinc-400">
+                <div class="absolute z-20 bg-gradient-to-t from-zinc-950 to-transparent w-full h-full"></div>
+                <div class="flex space-y-4 flex-col w-full">
+                    <div class="rounded-2xl w-full border border-zinc-100/10 p-4 bg-zinc-900/50">
+                        <div class="flex w-full items-center space-x-3">
+                            <img src="https://cdn.discordapp.com/avatars/606129505874214939/5a4f9854d37a4cffeb8fb8d79875237d.png?size=1024" alt="user" class="w-10 h-10 rounded-full">
+                            <div class="flex flex-col text-left justify-start">
+                                <h1 class="text-md font-bold text-zinc-200">User1</h1>
+                                <span class="text-xs text-zinc-400">@user1</span>
+                            </div>
+                        </div>
+                        <p class="pt-4">"👍 Some Dumb shiz Text here!</p>
+                    </div>
+                    <div class="rounded-2xl w-full border border-zinc-100/10 p-4 bg-zinc-900/50">
+                        <div class="flex w-full items-center space-x-3">
+                            <img src="https://cdn.discordapp.com/avatars/762102660421386261/ca7df725bb1557fbc0a11f7619bfc585.png?size=1024" alt="user" class="w-10 h-10 rounded-full">
+                            <div class="flex flex-col text-left justify-start">
+                                <h1 class="text-md font-bold text-zinc-200">User2</h1>
+                                <span class="text-xs text-zinc-400">@user2</span>
+                            </div>
+                        </div>
+                        <p class="pt-4">"Nig** wtf is this website ;-;"</p>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4 w-full">
+                    <div class="rounded-2xl w-full border border-zinc-100/10 p-4 bg-zinc-900/50">
+                        <div class="flex w-full items-center space-x-3">
+                            <img src="https://cdn.discordapp.com/avatars/611502414494826506/034ed3a68cdac15ee00393dae5336166.png?size=1024" alt="user" class="w-10 h-10 rounded-full">
+                            <div class="flex flex-col text-left justify-start">
+                                <h1 class="text-md font-bold text-zinc-200">User3</h1>
+                                <span class="text-xs text-zinc-400">@user3</span>
+                            </div>
+                        </div>
+                        <p class="pt-4">"Ayo why it black like my nig**"</p>
+                    </div>
+                    <div class="rounded-2xl w-full border border-zinc-100/10 p-4 bg-zinc-900/50">
+                        <div class="flex w-full items-center space-x-3">
+                            <img src="https://cdn.discordapp.com/avatars/880259976717799474/2778f591584181f5a5d36f1666da4b36.png?size=1024" alt="user" class="w-10 h-10 rounded-full">
+                            <div class="flex flex-col text-left justify-start">
+                                <h1 class="text-md font-bold text-zinc-200">User4</h1>
+                                <span class="text-xs text-zinc-400">@user4</span>
+                            </div>
+                        </div>
+                        <p class="pt-4">"Why my ass soo hairy?"</p>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4 w-full">
+                    <div class="rounded-2xl w-full border border-zinc-100/10 p-4 bg-zinc-900/50">
+                        <div class="flex w-full items-center space-x-3">
+                            <img src="https://cdn.discordapp.com/avatars/402878941272080394/355718b51a2bc2b71671fa8ac361bfef.png?size=1024" alt="user" class="w-10 h-10 rounded-full">
+                            <div class="flex flex-col text-left justify-start">
+                                <h1 class="text-md font-bold text-zinc-200">User5</h1>
+                                <span class="text-xs text-zinc-400">@user5</span>
+                            </div>
+                        </div>
+                        <p class="pt-4">"My PP is small. Why is it so small? How can this be? How can I be done like this? No pp = no ballz? Now how will I play with my ballz? Deez Ball? Nah, Deez Nuts in ya mouth xD"</p>
+                    </div>
+                </div>
+                <div class="flex flex-col space-y-4 w-full">
+                    <div class="rounded-2xl w-full border border-zinc-100/10 p-4 bg-zinc-900/50">
+                        <div class="flex w-full items-center space-x-3">
+                            <img src="https://cdn.discordapp.com/attachments/853261155077062680/1239514431726026772/300.png?ex=66599cc5&is=66584b45&hm=9d6f67e89b06ebdc38364a9fed21d041c723f0a36313e0cfd5924267d361cabd&" alt="user" class="w-10 h-10 rounded-full">
+                            <div class="flex flex-col text-left justify-start">
+                                <h1 class="text-md font-bold text-zinc-200">User6</h1>
+                                <span class="text-xs text-zinc-400">@user6</span>
+                            </div>
+                        </div>
+                        <p class="pt-4">"GYAAAT!!!"</p>
+                    </div>
+                    <div class="rounded-2xl w-full border border-zinc-100/10 p-4 bg-zinc-900/50">
+                        <div class="flex w-full items-center space-x-3">
+                            <img src="https://cdn.discordapp.com/avatars/693801767766458408/ff14cdbb3ad1bf10a1dc507271f7354b.png?size=1024" alt="user" class="w-10 h-10 rounded-full">
+                            <div class="flex flex-col text-left justify-start">
+                                <h1 class="text-md font-bold text-zinc-200">User7</h1>
+                                <span class="text-xs text-zinc-400">@user7</span>
+                            </div>
+                        </div>
+                        <p class="pt-4">"A snail has more Rizz then meh ;c"</p>
+                    </div>
+                </div>
+
+                <div class="absolute z-40 -mb-10 bottom-0 flex w-full items-center justify-center space-x-2">
+                    <a href="#" class="group relative overflow-hidden rounded-full p-px text-sm/6 text-zinc-400 duration-300 hover:text-zinc-100">
+                        <div class="dot animate-flow p-4 blur-md group-hover:blur-sm group-hover:p-5 -mt-2 -ml-2 rounded-full bg-cyan-400/90 absolute"></div>
+                        <div class="relative z-10 rounded-full bg-zinc-950 px-4 py-1.5 ring-1 ring-white/10">
+                            View TrustPilot Reviews
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            </div>
+            </div>
+        </section>
+        Testimonials Section End Unfinished -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="isolate mx-auto max-w-7xl p-6 pb-4 pt-12 lg:px-8">
+        <div class="border-t border-white/10 pt-4 md:flex md:items-center md:justify-between">
+            <div class="flex justify-center text-xs text-zinc-400 space-x-6 md:order-2">
+                <a class="duration-200 hover:text-zinc-300" href="assets/pdf/Refund Policy.pdf">Refund Policy</a>
+                <a class="duration-200 hover:text-zinc-300" href="assets/pdf/Cancellation Policy.pdf">Cancellation Policy</a>
+                <a class="duration-200 hover:text-zinc-300 " href="assets/pdf/Privacy Policy.pdf">Privacy Policy</a>
+                <a class="duration-200 hover:text-zinc-300 " href="assets/pdf/Terms of Service.pdf">Terms of Service</a>
+            </div>
+            <div class="mt-8 flex items-center gap-4 text-xs font-medium leading-5 text-zinc-400 max-md:flex-col md:order-1 md:mt-0 ">
+                <div class="order-2 md:order-1 ">
+                    <p>© 2024 RetroNodes Hosting ~ Founder</a>
+                        <a class="duration-200 hover:text-zinc-300 " href="https://acetheunfazed.in "> @AceTheUnfazed</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
