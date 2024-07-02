@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Urbanist&family=Quicksand&family=Karla&family=Raleway&family=Rajdhani&display=swap');
+body {
+    font-family: 'quicksand';
+    overflow-x: hidden;
+}
+.font-nunito {
+    font-family: 'nunito'
+}
+.font-urbanist {
+  font-family: 'urbanist'
+}
+.font-karla {
+  font-family: 'karla'
+}
+.font-quicksand {
+  font-family: 'quicksand'
+}
+.font-raleway {
+  font-family: 'raleway'
+}
+.font-rajdhani {
+  font-family: 'rajdhani'
+}
+.animate-flow {
+  animation: flow 4s linear infinite;
+}
+@keyframes flow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 100%;
+  }
+  50% {
+    top: 100%;
+    left: 100%;
+  }
+  75% {
+    top: 100%;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+::selection {
+    background: rgba(255, 255, 255, .2)
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+    background-size: cover;
+    z-index: 0;
+}
+  to {
+      opacity: 0;
+      transform: translateX(0)
+  }
+

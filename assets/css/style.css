@@ -1,0 +1,638 @@
+    /* TailwindCSS v3.4.3 | MIT License | https://tailwindcss.com */
+    
+    *,
+     ::after,
+     ::before {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+    }
+    
+     ::after,
+     ::before {
+        --tw-content: '';
+    }
+    
+     :host,
+    html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+        margin: 0;
+        line-height: inherit;
+    }
+    
+    hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px;
+    }
+    
+    abbr[title] {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+    
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    
+    b,
+    strong {
+        font-weight: bolder;
+    }
+    
+    code,
+    kbd,
+    pre,
+    samp {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        font-size: 1em;
+    }
+    
+    small {
+        font-size: 80%;
+    }
+    
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+    
+    sub {
+        bottom: -0.25em;
+    }
+    
+    sup {
+        top: -0.5em;
+    }
+    
+    table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+    }
+    
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+    }
+    
+    button,
+    select {
+        text-transform: none;
+    }
+    
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        -webkit-appearance: button;
+        background-color: transparent;
+        background-image: none;
+    }
+    
+     :-moz-focusring {
+        outline: auto;
+    }
+    
+     :-moz-ui-invalid {
+        box-shadow: none;
+    }
+    
+    progress {
+        vertical-align: baseline;
+    }
+    
+     ::-webkit-inner-spin-button,
+     ::-webkit-outer-spin-button {
+        height: auto;
+    }
+    
+    input[type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+    }
+    
+     ::-webkit-search-decoration {
+        -webkit-appearance: none;
+    }
+    
+     ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+    }
+    
+    summary {
+        display: list-item;
+    }
+    
+    blockquote,
+    dd,
+    dl,
+    figure,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    p,
+    pre {
+        margin: 0;
+    }
+    
+    fieldset {
+        margin: 0;
+        padding: 0;
+    }
+    
+    legend {
+        padding: 0;
+    }
+    
+    menu,
+    ol,
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    dialog {
+        padding: 0;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    input::placeholder,
+    textarea::placeholder {
+        opacity: 1;
+        color: #9ca3af;
+    }
+    
+    [role="button"],
+    button {
+        cursor: pointer;
+    }
+    
+     :disabled {
+        cursor: default;
+    }
+    
+    audio,
+    canvas,
+    embed,
+    iframe,
+    img,
+    object,
+    svg,
+    video {
+        display: block;
+        vertical-align: middle;
+    }
+    
+    img,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    [hidden] {
+        display: none;
+    }
+    
+    *,
+     ::before,
+     ::after {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+    }
+    
+     ::backdrop {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+    }
+    
+    .pointer-events-none {
+        pointer-events: none;
+    }
+    
+    .absolute {
+        position: absolute;
+    }
+    
+    .relative {
+        position: relative;
+    }
+    
+    .inset-0 {
+        inset: 0px;
+    }
+    
+    .inset-x-0 {
+        left: 0px;
+        right: 0px;
+    }
+    
+    .-left-0 {
+        left: -0px;
+    }
+    
+    .-top-0 {
+        top: -0px;
+    }
+    
+    .-top-0\.5 {
+        top: -0.125rem;
+    }
+    
+    .-top-1 {
+        top: -0.25rem;
+    }
+    
+    .-top-6 {
+        top: -1.5rem;
+    }
+    
+    .bottom-0 {
+        bottom: 0px;
+    }
+    
+    .left-0 {
+        left: 0px;
+    }
+    
+    .left-1\/2 {
+        left: 50
+    }
+    /* Panel Preview Pop-Up */
+    
+    .center-image {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .popup {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/ opacity */
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .popup.visible {
+        opacity: 1;
+    }
+    
+    .popup-content {
+        position: relative;
+        width: 95%;
+        max-width: 1200px;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .popup.visible .popup-content {
+        transform: scale(1);
+    }
+    
+    .popup img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    /* Style for the cancel button */
+    
+    .cancel-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: rgb(56, 102, 170);
+        /* Initial background color */
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        /* Make the text bold */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .cancel-button:hover {
+        background-color: rgb(151, 5, 5);
+        /* Background color on hover */
+    }
+    
+    .cancel-button:active {
+        background-color: darkred;
+        /* Background color on click */
+    }
+    /* Loading Screen Styles */
+    
+    #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        /* Total black background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        opacity: 1;
+        /* Initially visible */
+        transition: opacity 1.5s ease;
+        /* Smooth fade-in transition */
+    }
+    
+    #loading-screen.hidden {
+        opacity: 0;
+        transition: opacity 2.5s ease;
+        /* Smooth fade-out transition */
+    }
+    /* Circular Loader Styles */
+    
+    .loader {
+        border: 4px solid rgba(192, 192, 192, 0.2);
+        /* Light gray border */
+        border-top: 4px solid white;
+        /* White top border for the spinner effect */
+        border-radius: 50%;
+        /* Circular shape */
+        width: 40px;
+        height: 40px;
+        animation: spin 2s linear infinite;
+        /* Spinner animation */
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
+        /* Subtle neon glow effect */
+        opacity: 1;
+        /* Initially visible */
+        transition: opacity 2.5s ease;
+        /* Smooth fade-out transition */
+    }
+    
+    .loader.hidden {
+        opacity: 0;
+        /* Fade-out effect */
+    }
+    /* Spinner Animation */
+    
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    /* Content Margins */
+    
+    #content {
+        margin-top: 50px;
+        /* Just for example spacing */
+        text-align: center;
+        /* Center align content */
+    }
+    /* Content Styles */
+    
+    .hidden {
+        display: none;
+    }
+    /* Navbar Logo */
+    
+    .small-logo {
+        width: 30px;
+        /* Adjust as needed */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin-right: 1.5px;
+        /* Add spacing between logo and text */
+    }
+    /* Plans */
+    
+    body {
+        font-family: 'Quicksand', sans-serif;
+        overflow-x: hidden;
+    }
+    
+    .font-nunito {
+        font-family: 'Nunito', sans-serif;
+    }
+    
+    .font-urbanist {
+        font-family: 'Urbanist', sans-serif;
+    }
+    
+    .font-karla {
+        font-family: 'Karla', sans-serif;
+    }
+    
+    .font-quicksand {
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    .font-raleway {
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    .font-rajdhani {
+        font-family: 'Rajdhani', sans-serif;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .plan-card {
+        background: linear-gradient(to bottom, #1f1f1f, #121212);
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        color: #ffffff;
+    }
+    
+    .plan-card h2 {
+        margin-bottom: 16px;
+    }
+    
+    .plan-card .price {
+        margin-bottom: 16px;
+    }
+    
+    .plan-card img {
+        margin-bottom: 16px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .plan-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .plan-card ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+    
+    .plan-card ul li img {
+        margin-right: 8px;
+    }
