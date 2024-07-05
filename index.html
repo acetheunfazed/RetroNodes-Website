@@ -19,36 +19,127 @@
 
     <!-- Navbar Section -->
     <div id="content" class="hidden"></div>
-
     <header class="absolute inset-x-0 top-0 z-10">
         <div class="relative flex justify-center">
             <div class="mx-4 w-full max-w-7xl">
                 <nav class="flex min-h-[80px] items-center justify-between px-4 py-3">
                     <div class="flex items-center space-x-2">
                         <img src="assets/images/retronodes.png" alt="Your Logo" class="small-logo">
-                        <h1 class="text-transparent bg-gradient-to-br from-white to-zinc-500 bg-clip-text w-max text-2xl font-bold font-raleway">RetroNodes Hosting</h1>
+                        <h1 class="text-transparent bg-gradient-to-br from-white to-zinc-500 bg-clip-text w-max text-2xl font-bold font-raleway">RetroNodes</h1>
                     </div>
-                    <div class="flex flex-1 items-center justify-end space-x-4 text-sm font-medium text-zinc-300 sm:space-x-6">
+                    <div class="hidden sm:flex flex-1 items-center justify-end space-x-4 text-sm font-medium text-zinc-300 sm:space-x-6">
                         <a href="https://status.retronodes.cloud" class="group relative overflow-hidden rounded-full p-px text-sm/6 text-zinc-400 duration-300 hover:text-zinc-100">
-                            <div class="relative z-10 rounded-full bg-zinc-950 px-4 py-1.5 ring-1 ring-white/10">
-                                Uptime Status
+                            <div class="relative z-10 rounded-full bg-zinc-900 group-hover:bg-gradient-to-br from-[#007CF0] to-[#00DFD8] group-hover:bg-clip-border">
+                                <div class="rounded-full bg-zinc-950 px-3 py-2 group-hover:bg-zinc-950">Status</div>
+                            </div>
+                        </a>
+                        <a href="https://retronodes.cloud/panel" class="group relative overflow-hidden rounded-full p-px text-sm/6 text-zinc-400 duration-300 hover:text-zinc-100">
+                            <div class="relative z-10 rounded-full bg-zinc-900 group-hover:bg-gradient-to-br from-[#007CF0] to-[#00DFD8] group-hover:bg-clip-border">
+                                <div class="rounded-full bg-zinc-950 px-3 py-2 group-hover:bg-zinc-950">Panel</div>
                             </div>
                         </a>
                         <a href="https://discord.com/invite/7nxh3WsY46" class="group relative overflow-hidden rounded-full p-px text-sm/6 text-zinc-400 duration-300 hover:text-zinc-100">
-                            <div class="relative z-10 rounded-full bg-zinc-950 px-4 py-1.5 ring-1 ring-white/10">
-                                Discord Server
+                            <div class="relative z-10 rounded-full bg-zinc-900 group-hover:bg-gradient-to-br from-[#007CF0] to-[#00DFD8] group-hover:bg-clip-border">
+                                <div class="rounded-full bg-zinc-950 px-3 py-2 group-hover:bg-zinc-950">Discord</div>
                             </div>
                         </a>
-                        <a href="https://dash.retronodes.cloud" class="group relative overflow-hidden rounded-full p-px text-sm/6 text-zinc-400 duration-300 hover:text-zinc-100">
-                            <div class="relative z-10 rounded-full bg-zinc-950 px-4 py-1.5 ring-1 ring-white/10">
-                                Dashboard
-                            </div>
-                        </a>
+                    </div>
+                    <div class="sm:hidden relative">
+                        <button id="dropdownBtn" class="flex items-center text-zinc-300 focus:outline-none relative">
+                        <span>Quick Links</span>
+                        <svg id="dropdownArrow" class="w-6 h-6 ml-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                        <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-48 bg-zinc-900 text-zinc-300 rounded-lg shadow-lg opacity-0 transform transition-opacity duration-300 ease-in-out">
+                            <a href="https://status.retronodes.cloud" class="flex items-center px-4 py-2 hover:bg-zinc-800">
+                                <img src="assets/images/uptime-white.png" class="w-5 h-5 mr-2" alt="Status">
+                                <span>Status</span>
+                            </a>
+                            <a href="https://retronodes.cloud/panel" class="flex items-center px-4 py-2 hover:bg-zinc-800">
+                                <img src="assets/images/dashboard-white.png" class="w-5 h-5 mr-2" alt="Panel">
+                                <span>Panel</span>
+                            </a>
+                            <a href="https://retronodes.cloud/discord" class="flex items-center px-4 py-2 hover:bg-zinc-800">
+                                <img src="assets/images/discord-white.png" class="w-5 h-5 mr-2" alt="Discord">
+                                <span>Discord</span>
+                            </a>
+                        </div>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
+
+    <style>
+        #dropdownMenu {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            z-index: 10;
+            display: none;
+            background: linear-gradient(to bottom top, #272727, #000000);
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        #dropdownMenu.open {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes dropdownPopIn {
+            0% {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        #dropdownArrow {
+            transition: transform 0.6s ease;
+        }
+        
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownBtn = document.getElementById('dropdownBtn');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            const dropdownArrow = document.getElementById('dropdownArrow');
+
+            dropdownBtn.addEventListener('click', function() {
+                dropdownMenu.classList.toggle('hidden');
+                dropdownMenu.classList.toggle('open');
+                dropdownArrow.classList.toggle('rotate-180');
+
+                if (dropdownMenu.classList.contains('open')) {
+                    dropdownMenu.style.animation = 'dropdownPopIn 0.3s forwards';
+                } else {
+                    dropdownMenu.style.animation = 'none';
+                }
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add('hidden');
+                    dropdownMenu.classList.remove('open');
+                    dropdownArrow.classList.remove('rotate-180');
+                    dropdownMenu.style.animation = 'none';
+                }
+            });
+        });
+    </script>
 
     <!-- Main Section -->
     <main>
@@ -139,12 +230,13 @@
                     Unlock Various Management Capabilities with Our GamePanel, <br>From SFTP Access, Activity Logs, Startup Manager & many more as listed below:
                 </div>
             </div>
-            <div class="mt-16 grid grid-cols-6 gap-4 lg:grid-cols-12 lg:gap-6 xl:gap-8">
-                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+            <div class="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 lg:gap-6 xl:gap-8">
+                <!-- File Manager -->
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80">
                     <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
                         <div class="relative -z-10 h-full w-full">
-                            <div class="absolute -left-0 right-0 h-full w-full -top-6">
-                                <img src="assets/images/file-manager.png" class="h-full w-full" alt="pic">
+                            <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
+                                <img src="assets/images/file-manager.png" class="h-full w-auto" alt="pic">
                             </div>
                         </div>
                     </div>
@@ -153,7 +245,9 @@
                         <p class="max-w-sm text-sm text-zinc-400/80">Manage server files directly from our GamePanel, including editing configuration files, handling game assets, and uploading or downloading files.</p>
                     </div>
                 </div>
-                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+
+                <!-- Plugins Manager -->
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80">
                     <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
                         <div class="relative -z-10 h-full w-full">
                             <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
@@ -166,7 +260,9 @@
                         <p class="max-w-sm text-sm text-zinc-400/80">Easily download plugins from all market places without manually visiting, downloading, uploading and restarting to apply your plugins.</p>
                     </div>
                 </div>
-                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+
+                <!-- Schedule Manager -->
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80">
                     <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
                         <div class="relative -z-10 h-full w-full">
                             <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
@@ -179,7 +275,9 @@
                         <p class="max-w-sm text-sm text-zinc-400/80">Easily automate tasks from our GamePanel for servers, including backups, updates, and custom scripts, ensuring smooth routine maintenance.</p>
                     </div>
                 </div>
-                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+
+                <!-- Backup Manager -->
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80">
                     <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
                         <div class="relative -z-10 h-full w-full">
                             <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
@@ -192,7 +290,9 @@
                         <p class="max-w-sm text-sm text-zinc-400/80">Safeguard server data backups with our GamePanel, ensuring utmost data security and effortless restoration with a single click.</p>
                     </div>
                 </div>
-                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+
+                <!-- Network Manager -->
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80">
                     <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
                         <div class="relative -z-10 h-full w-full">
                             <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
@@ -205,7 +305,9 @@
                         <p class="max-w-sm text-sm text-zinc-400/80">Our GamePanel offers intuitive controls, empowering users to effortlessly manage ports, IP addresses, and firewall settings with ease and precision.</p>
                     </div>
                 </div>
-                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80 md:col-span-3 lg:col-span-5 xl:col-span-4">
+
+                <!-- Subusers Manager -->
+                <div class="flex h-[400px] flex-col overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800/80">
                     <div class="relative mb-4 flex h-full w-full items-center justify-center overflow-hidden [mask:linear-gradient(black_70%,transparent)]">
                         <div class="relative -z-10 h-full w-full">
                             <div class="absolute -left-0 right-0 -top-6 h-full w-full overflow-hidden">
@@ -220,6 +322,7 @@
                 </div>
             </div>
         </section>
+
 
         <section class="mx-auto max-w-7xl p-6 pt-16 md:pt-24 lg:px-8 text-center">
             <div class="grid max-w-xl lg:max-w-2xl items-start justify-center gap-5 mx-auto">
