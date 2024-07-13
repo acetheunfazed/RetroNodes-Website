@@ -544,7 +544,6 @@
     
     #content {
         margin-top: 50px;
-        /* Just for example spacing */
         text-align: center;
         /* Center align content */
     }
@@ -557,11 +556,10 @@
     
     .small-logo {
         width: 30px;
-        /* Adjust as needed */
         height: auto;
         /* Maintain aspect ratio */
         margin-right: 1.5px;
-        /* Add spacing between logo and text */
+        /* Spacing between logo and text */
     }
     /* Plans */
     
@@ -645,7 +643,7 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
-        /* Add padding to the left and right */
+        /* Padding to the left and right */
     }
     
     @media (max-width: 992px) {
@@ -661,7 +659,7 @@
     }
     
     .pricing-card {
-        background-color: #1f1f1fc2;
+        background-color: #00000000;
         color: rgba(255, 255, 255, 0.651);
         border-radius: 15px;
         padding: 20px;
@@ -687,7 +685,7 @@
     
     .pricing-card:hover {
         transform: scale(1.01);
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.158);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.541);
     }
     
     .pricing-card:hover::before {
@@ -752,4 +750,28 @@
     .pricing-card button:hover {
         background-color: #d87b2e;
         transform: scale(1.05);
+    }
+    /* Apply constant glow effect to buttons inside the navigation section */
+    
+    .relative>.rounded-full::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 12px);
+        height: calc(100% + 12px);
+        background-color: rgb(46, 46, 46);
+        border-radius: 999px;
+        z-index: -1;
+        opacity: 1;
+        /* Make glow effect constant */
+        transition: opacity 0.3s ease;
+        /* Smooth transition for opacity */
+    }
+    /* Ensure hover state does not affect the glow effect */
+    
+    .relative:hover>.rounded-full::before {
+        opacity: 1;
+        /* Maintain constant glow effect on hover */
     }
