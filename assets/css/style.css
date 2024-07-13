@@ -636,3 +636,120 @@
     .plan-card ul li img {
         margin-right: 8px;
     }
+    /* Plans */
+    
+    .pricing-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        /* Add padding to the left and right */
+    }
+    
+    @media (max-width: 992px) {
+        .pricing-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .pricing-container {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .pricing-card {
+        background-color: #1f1f1fc2;
+        color: rgba(255, 255, 255, 0.651);
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 0 5px rgba(85, 85, 85, 0.815);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+    }
+    
+    .pricing-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 20px;
+        pointer-events: none;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.541);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .pricing-card:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.158);
+    }
+    
+    .pricing-card:hover::before {
+        opacity: 1;
+    }
+    
+    .pricing-card h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    
+    .pricing-card p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    
+    .price {
+        font-size: 2em;
+        margin: 20px 0;
+        font-weight: bold;
+    }
+    
+    .price span {
+        font-size: 0.6em;
+        vertical-align: super;
+    }
+    
+    .pricing-card img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .pricing-card ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    
+    .pricing-card ul li {
+        margin: 10px 0;
+    }
+    
+    .pricing-card button {
+        background-color: #f09d42;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .pricing-card button:hover {
+        background-color: #d87b2e;
+        transform: scale(1.05);
+    }
