@@ -1,3 +1,9 @@
+document.querySelectorAll('.pricing-card button').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Join our Discord Server to order your Selected Plan.');
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Show the loading screen
     const loadingScreen = document.getElementById('loading-screen');
